@@ -24,9 +24,6 @@ var dispatch = d3.dispatch("load", "statechange");
 
 var groups = [
   "Under 5 Years",
-  "5 to 13 Years",
-  "14 to 17 Years",
-  "18 to 24 Years",
   "25 to 44 Years",
   "45 to 64 Years",
   "65 Years and Over"
