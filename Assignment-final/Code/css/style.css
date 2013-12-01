@@ -1,10 +1,13 @@
-/*Main styles*/
-
-/* apply a natural box layout model to all elements */
+/* Apply a natural box layout model to all elements */
 
 *, *:before, *:after {
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
  }
+
+
+/*Main element styles*/
 
 body {
 	box-shadow: inset 0 0 0 rgba(0,0,0,0.4);
@@ -12,7 +15,7 @@ body {
 	background-color: #D9D2CA;
 	font-family: 'Muli', sans-serif;
 	font-weight: lighter;
-	color: #666
+	color: #666;
 }
 
 p, ul, input, textarea {
@@ -20,6 +23,7 @@ p, ul, input, textarea {
 	padding: 10px 0px;
 	margin: 0px;
 	list-style-type: square;
+	font-weight: lighter;
 }
 
 span {
@@ -31,12 +35,9 @@ ul {
 }	
 
 h1 {
-	font-weight: 700;
-	font-style: italic;
-	font-size: 95px;
-	margin: 0px 0px;
-	letter-spacing: -5px;
-	text-shadow: 0px 0px 10px #999;
+	letter-spacing: -0.5px;
+	font-size: 50px;
+	margin: 0px;
 }
 
 h2 {
@@ -46,14 +47,8 @@ h2 {
 }
 
 i {
-	font-size: 90px;
+	font-size: 120px;
 	padding: 10px 0px;
-	text-align: center;
-}
-
-
-h2, i {
-	text-shadow: 0px 0px 25px #ccc;
 }
 
 h3 {
@@ -66,12 +61,65 @@ a {
 	color: #666
 }
 
+iframe {
+	box-shadow: 0px 0px 25px #aaa;
+}
+
+/*Hover effects*/
+
+a:hover {
+	-webkit-transition: box-shadow 0.4s ease-in-out, border-top 0.4 ease-in-out, background-color 0.4 ease-in-out, color 0.4 ease-in-out;
+	-moz-transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    -ms-transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+	transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+/*________________________*/
+
+/*General classes*/
+
+/*Set div width*/
+
 .container {
 	width: 1080px;
 	margin: 0px auto;
 	height: auto;
-	clear: both;
+	display: block;
 }
+
+.three-quarter-width {
+	width: 810px;
+	float: left;
+}
+
+.two-third-width {
+	width: 720px;
+	float: left;
+}
+
+.half-width {
+	width: 540px;
+	float: left;
+}
+
+.third-width {
+	width: 360px;
+	float: left;
+}
+
+.quarter-width {
+	width: 270px;
+	float: left;
+}
+
+.sixth-width {
+	width: 180px;
+	float: left;
+}
+
+
+/*Set box color*/
 
 .blue {
 	background-color: #53D0F9;
@@ -89,7 +137,88 @@ a {
 	background-color: #666;
 }
 
-/*nav*/
+
+/*Reverse text out of dark background*/
+
+.reversed {
+	color: #EFEBE6;
+	text-shadow: 0px 0px 150px #aaa;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+
+/*Drop an element*/
+
+.bottom {
+	position: absolute;
+	bottom: 50px;
+}
+
+
+/*Make a button*/
+
+.button {
+	width: auto;
+	height: 50px;
+	display: inline-block;
+	padding: 10px 20px;
+  	font-size: 17px;
+  	color: #fff;
+  	border-radius: 5px;
+  	text-transform: uppercase;
+  	box-shadow: 0px 0px 25px #bbb;
+  	line-height: 30px;
+}
+
+.button:hover {
+	background-color: #999;
+}
+
+.button span {
+	font-family: 'Dorsa';
+	font-size: 40px;
+	vertical-align: top;
+}
+
+
+/*Page related styles*/
+
+body.home a.home-nav {
+	border-top: 8px solid #53D0F9;
+	color: #53D0F9;
+}
+
+body.benefits a.benefits-nav {
+	border-top: 8px solid #FFCB4E;
+	color: #FFCB4E;
+}
+
+body.get-started a.get-started-nav {
+	border-top: 8px solid #FF6A4E;
+	color: #FF6A4E;
+}
+
+a:hover.home-nav  {
+	border-top: 8px solid #53D0F9;
+}
+
+a:hover.benefits-nav {
+	border-top: 8px solid #FFCB4E;
+}
+
+a:hover.get-started-nav {
+	border-top: 8px solid #FF6A4E;
+}
+
+
+/*________________________*/
+
+/*Specific ids*/
+
+/*Navigation*/
 
 #nav {
 	width: 100%;
@@ -98,7 +227,7 @@ a {
 	background-color: #EFEBE6;
 }
 
-.logo {
+#logo {
 	width: 270px;
 	height: 80px;
 	position: absolute;
@@ -106,7 +235,7 @@ a {
 	padding: 15px;
 }
 
-.logo p {
+#logo p {
 	display: inline-block;
 	font-size: 35px;
 	padding: 5px;
@@ -145,53 +274,21 @@ a {
 	display: inline-block;
 }
 
-.button {
-	width: auto;
-	height: 50px;
-	display: inline-block;
-	padding: 10px 20px;
-  	font-size: 17px;
-  	color: #fff;
-  	border-radius: 5px;
-  	text-transform: uppercase;
-  	box-shadow: 0px 0px 25px #bbb;
-  	line-height: 30px;
-}
 
-.button span {
-	font-family: 'Dorsa';
-	font-size: 40px;
-	vertical-align: top;
-}
+/*Promo section*/
 
-.button:hover {
-	background-color: #999;
+#promo{
+	padding: 80px 0px 0px;
 }
-
-/*Hero section*/
 
 #promo-main {
-	width: 540px;
-	float: left;
-	padding: 0px 15px;
+	padding: 80px 50px 0px;
 }
 
-body.home #promo-main {
-	padding: 80px 40px 0px;
-	width: 810px;
-}
-
-#promo-right, #promo-left {
-	width: 270px;
+#promo-left {
 	height: 350px;
-	float: left;
 	position: relative;
 	text-align: center;
-}
-
-a.arrow-box {
-	text-align: center;
-	margin-top: 20px;
 }
 
 #promo-left img {
@@ -204,16 +301,58 @@ a.arrow-box {
 	z-index:-1;
 }
 
-.arrow-box {
-	font-family: 'Dorsa', sans-serif;
-	color: #fff;
-	font-size: 70px;
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	box-shadow: 0px 0px 25px #ccc;
-	line-height: 60px;
+.icon-wrap {
+	width: 360px;
+	text-align: center;
+
 }
+
+.icon-wrap i {
+	background-color: #444;
+	border-radius: 100%;
+	text-align: center;
+	width: 180px;
+	height: 180px;
+	line-height: 170px;
+	display: block;
+	margin: 40px auto;
+	box-shadow: 0px 0px 25px #666;
+}
+
+.icon-wrap a {
+	display: block;
+	width: 238px;
+	margin: 10px auto 60px;
+}
+
+ a:hover.underline {
+	color: #999;
+}
+
+#data-vis {
+	padding: 60px 0px;
+	position: relative;
+	background-color: #333;
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	clear: both;
+}
+
+#data-vis i {
+	float: left;
+	margin: 20px 40px 0px 0px;
+	padding: 0px;
+}
+
+#chart-1 {
+	background-color: white;
+	width: 700px;
+	margin: 10px;
+}
+
+
+/*Main content*/
 
 #content {
 	width: 100%;
@@ -223,9 +362,7 @@ a.arrow-box {
 }
 
 #content-1, #content-2, #content-3  {
-	width: 360px;
 	display: inline-block;
-	float: left;
 	font-size: 20px;
 	margin: 60px 0px;
 }
@@ -238,16 +375,22 @@ a.arrow-box {
 	height: 180px;
 	display: block;
 	margin: 70px auto 10px;
-
 }
 
 #content-1 h2, #content-2 h2, #content-3 h2 {
 	text-align: center;
 }
 
-#content-3 .arrow-box {
-	float: right;
+#benefits-summary {
+	padding: 60px 0px 60px 40px;
 }
+
+#video {
+	padding: 100px 0px;
+}
+
+
+/*Footer section*/
 
 #footer {
 	background-color: #333;
@@ -257,25 +400,12 @@ a.arrow-box {
 	position: relative;
 }
 
-.bottom {
-	position: absolute;
-	bottom: 50px;
-}
-
 #footer img {
-	height: 60px;
-	width: auto;
+	width: 320px;
 	margin: 5px 3px;
 }
 
-.reversed {
-	color: #EFEBE6;
-	text-shadow: 0px 0px 25px #888;
-}
-
 #faq, #contact {
-	width: 540px;
-	float: left;
 	padding: 60px 0px 10px;
 }
 
@@ -301,6 +431,7 @@ form {
 
 input, textarea {
 	box-shadow: 0px 0px 25px #777;
+	background-color: #EFEBE6;
 	border: none;
 	padding: 10px;
 	margin: 20px 20px 0px 0px;
@@ -336,7 +467,7 @@ textarea {
     width: 20px;
     height: 20px;
     display: inline-block;
-    background-color: white;
+    background-color: #EFEBE6;
     margin: 20px 20px 20px 0px;
     color: transparent;
     border: 2px solid #53D0F9;
@@ -376,73 +507,12 @@ textarea {
 	display: inline-block;
 }
 
-/*Button effects and styles*/
-
-a:hover {
-	-webkit-transition: box-shadow 0.4s ease-in-out, border-top 0.4 ease-in-out, background-color 0.4 ease-in-out, color 0.4 ease-in-out;
-	-moz-transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-    -ms-transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-	transition: box-shadow 0.4s ease-in-out, border-top 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-}
-
-body.home a.home-nav {
-	border-top: 8px solid #53D0F9;
-	font-weight: bold;
-}
-
-body.benefits a.benefits-nav {
-	border-top: 8px solid #FFCB4E;
-	font-weight: bold;
-}
-
-body.get-started a.get-started-nav {
-	border-top: 8px solid #FF6A4E;
-	font-weight: bold;
-}
-
-a:hover.home-nav  {
-	border-top: 8px solid #53D0F9;
-}
-
-a:hover.benefits-nav {
-	border-top: 8px solid #FFCB4E;
-}
-
-a:hover.get-started-nav {
-	border-top: 8px solid #FF6A4E;
-}
-
-body.home #promo-right a, body.home #promo-left a, body.home #promo-content a  {
-	background-color: #53D0F9;
-}
-
-body.benefits #promo-right a, body.benefits #promo-left a, body.benefits #promo-content a {
-	background-color: #5183ED;
-}
-
-body.get-started #promo-right a, body.get-started #promo-left a, body.get-started #promo-content a {
-	background-color: #40EDB4;
-}
-
-body.home #promo-right a:hover, body.home #promo-left a:hover, body.home #promo-content a:hover {
-	background-color: #96D8F5;
-}
-
-body.benefits #promo-right a:hover, body.benefits #promo-left a:hover, body.benefits #promo-content a:hover {
-	background-color: #9DB9F6;
-}
-
-body.get-started #promo-right a:hover, body.get-started #promo-left a:hover, body.get-started #promo-content a:hover {
-	background-color: #92F6D5;
-}
-
-/*Is there an easier way to achieve the above?*/
 
 /*Responsive layouts*/
 
 /* Tablet: 768px.*/
 
-@media only screen and (max-width: 991px) {
+/*@media only screen and (max-width: 991px) {
 	#page-links {
 		width: 70%;
 		padding: 2.5%;
@@ -468,10 +538,10 @@ body.get-started #promo-right a:hover, body.get-started #promo-left a:hover, bod
 		right: 30%;
 	}
 }
-
+*/
 /* Mobile wide: 465px.*/
 
-@media only screen and (max-width: 767px) {
+/*@media only screen and (max-width: 767px) {
 	.tagline {
 		left: 90px;
 		top: -15px;
@@ -505,21 +575,21 @@ body.get-started #promo-right a:hover, body.get-started #promo-left a:hover, bod
 		width: 90%;
 		margin: 0px 5%
 	}
-}
+}*/
 
 
 /* Global nav adjust*/
 
-@media only screen and (max-width: 625px) {
+/*@media only screen and (max-width: 625px) {
 	#global-links, #nav img {
 		width: 65%;
 		margin: 5px 17.5%;
-	}
+	}*/
 
 
 /* Mobile: 320px.*/
 
-@media only screen and (max-width: 464px) {
+/*@media only screen and (max-width: 464px) {
 	h1 {
 		font-size: 50px;
 		letter-spacing: -4px;
@@ -556,4 +626,4 @@ body.get-started #promo-right a:hover, body.get-started #promo-left a:hover, bod
 	}
 }
 
-
+*/
