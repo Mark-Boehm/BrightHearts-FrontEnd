@@ -1,0 +1,457 @@
+/*BOX SIZING*/
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+
+ }
+
+/*-------------------ELEMENTS-------------------*/
+
+
+/*GLOBAL*/
+
+
+html {
+/*    height: 100%;*/
+}
+
+
+body {
+  	line-height: 1.4;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(radial, 70% 40%, 0, 70% 40%, 100, from(#2069A5), to(#2C3254));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-radial-gradient(65% 40%, closest-corner, #2069A5, #2C3254);
+	/* Firefox 3.6+ */
+	background: -moz-radial-gradient(70% 40%, closest-corner, #2069A5, #2C3254);
+	/* IE 10 */
+	background: -ms-radial-gradient(70% 40%, closest-corner, #2069A5, #2C3254);
+	margin: 0;
+	background-attachment: fixed;
+}
+
+
+
+
+
+/*TEXT*/
+
+
+p {
+
+}
+
+ul {
+	padding-left: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+h1 {
+	font-family: 'Dosis', sans-serif;
+	font-size: 100px;
+	font-weight: 800;
+	margin: 0;
+}
+
+h2 {
+	
+}
+
+h3 {
+	font-size: 26px;
+}
+
+h4 {
+
+}
+
+
+
+
+
+
+/*FORM*/
+
+form {
+
+}
+
+input, textarea {
+
+}
+
+input {
+
+}
+
+textarea {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------CLASSES-------------------*/
+
+
+/*LAYOUT*/
+
+
+.full-width {
+	width: 1120px;
+	margin: 0px auto;
+}
+
+.three-quarter-width {
+	width: 765px;
+	float: left;
+}
+
+.two-third-width {
+	width: 680px;
+	float: left;
+}
+
+.half-width {
+	width: 510px;
+	float: left;
+}
+
+.third-width {
+	width: 340px;
+	float: left;
+}
+
+.quarter-width {
+	width: 255px;
+	float: left;
+}
+
+.section {
+	padding-left: 100px;
+}
+
+
+
+
+/*COLOUR*/
+
+
+.white {
+	background-color: #53D0F9;
+}
+
+.white-text {
+	color: #53D0F9;
+}
+
+
+
+.grey {
+	background-color: #777;
+}
+
+.grey-text {
+	color: #777;
+}
+
+
+
+.red {
+	background-color: #F44500;
+}
+
+.red-text {
+	color: #F44500;
+}
+
+
+
+.light-blue {
+	background-color: #FF6A4E;
+}
+
+.light-blue-text {
+	color: #FF6A4E;
+}
+
+
+
+.blue {
+	background-color: #2069A5;
+}
+
+.blue-text {
+	color: #2069A5;
+}
+
+
+
+.dark-blue {
+	background-color: #FF6A4E;
+}
+
+.dark-blue-text {
+	color: #FF6A4E;
+}
+
+
+
+
+
+
+
+/*TOOLS*/
+
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
+
+
+
+
+
+/*UI*/
+
+
+.texture {
+	background-image: url(../images/noisy-texture.png);
+	height: 100%;
+	width: 100%;
+}
+
+.button {
+	width: auto;
+	min-width: 170px;
+	height: 50px;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 30px 30px 0 0;
+  	font-size: 17px;
+  	color: #fff;
+  	border-radius: 5px;
+  	text-transform: uppercase;
+  	text-align: center;
+  	line-height: 30px;
+}
+
+.border {
+	border: solid 3px #fff;
+	border-radius: 30px;
+}
+
+
+
+
+
+/*INTERACTION*/
+
+
+a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i {
+	-webkit-transition: box-shadow 0.4s ease-in-out, border 0.4 ease-in-out, background-color 0.4 ease-in-out, color 0.4 ease-in-out;
+	-moz-transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    -ms-transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+	transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------IDS-------------------*/
+
+
+/*NAVIGATION*/
+
+
+#nav {
+	position: fixed;
+	z-index: 9;
+	top: 50%;
+	margin-top: -160px;
+}
+
+.nav-name {
+	display: inline-block;
+	color: rgba(0,0,0,0);
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'Dosis';
+}
+
+/*
+#nav p:hover {
+	background-color: blue;
+	color: #fff;
+}*/
+
+.nav-item:hover .nav-name {
+	color: rgba(83,210,249,0.5);
+}
+
+#nav i {
+	border: solid 3px rgba(0,0,0,0);
+	margin-right: 20px;
+	width: 29px;
+	height: 29px;
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 4px;
+	border-radius: 50%;
+	color: rgba(83,210,249,0.5);
+}
+
+#nav .current i {
+	color: #fff;
+	border: solid 3px rgba(83,210,249,0.5);
+}
+
+
+
+
+/*HOME*/
+
+#home-copy {
+	padding-top: 100px;
+}
+
+#home-copy img {
+	float: left;
+	margin: 30px 30px 0 0;
+}
+
+#home-image img {
+	float: right;
+	padding-top: 300px;
+}
+
+
+
+
+/*ABOUT*/
+
+
+
+
+
+
+
+/*FEATURES*/
+
+
+
+
+
+
+
+/*BRIGHT CHARTS*/
+
+
+
+
+
+
+
+
+/*BENEFITS*/
+
+
+
+
+
+
+
+/*GET STARTED*/
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------RESPONSIVE-------------------*/
+
+
+/* Global nav adjust*/
+
+@media only screen and (max-width: 625px) {
+
+	}
+
+
+/* Tablet: 768px.*/
+
+@media only screen and (max-width: 991px) {
+
+}
+
+
+/* Mobile wide: 465px.*/
+
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Mobile: 320px.*/
+
+@media only screen and (max-width: 464px) {
+
+}
+
+
