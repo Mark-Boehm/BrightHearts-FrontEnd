@@ -1,6 +1,8 @@
 /*BOX SIZING*/
 
 *, *:before, *:after {
+	margin: 0;
+	padding: 0;
 	-moz-box-sizing: border-box; 
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box;
@@ -43,16 +45,15 @@ body {
 
 
 p {
-
+/*	font-size: 16px;*/
 }
 
 ul {
-	padding-left: 20px;
+	padding-left: 30px;
 }
 
 a {
 	text-decoration: none;
-	color: #fff;
 }
 
 h1 {
@@ -63,7 +64,9 @@ h1 {
 }
 
 h2 {
-	
+	font-family: 'Dosis', sans-serif;
+	font-size: 50px;
+	margin-top: 20px;
 }
 
 h3 {
@@ -71,7 +74,9 @@ h3 {
 }
 
 h4 {
-
+	font-size: 30px;
+	font-family: 'Dosis', sans-serif;
+	margin: 30px 0;
 }
 
 
@@ -159,11 +164,11 @@ textarea {
 
 
 .white {
-	background-color: #53D0F9;
+	background-color: #fff;
 }
 
 .white-text {
-	color: #53D0F9;
+	color: #fff;
 }
 
 
@@ -189,11 +194,11 @@ textarea {
 
 
 .light-blue {
-	background-color: #FF6A4E;
+	background-color: #53D2F9;
 }
 
 .light-blue-text {
-	color: #FF6A4E;
+	color: #53D2F9;
 }
 
 
@@ -209,11 +214,16 @@ textarea {
 
 
 .dark-blue {
-	background-color: #FF6A4E;
+	background-color: #2C3254;
 }
 
 .dark-blue-text {
-	color: #FF6A4E;
+	color: #2C3254;
+}
+
+.dark-blue-border {
+	border: solid 3px #2C3254;
+	border-radius: 20px;
 }
 
 
@@ -264,9 +274,13 @@ textarea {
 
 .border {
 	border: solid 3px #fff;
-	border-radius: 30px;
+	border-radius: 20px;
 }
 
+.section {
+	padding-top: 80px;
+	padding-bottom: 100px;
+}
 
 
 
@@ -317,12 +331,6 @@ a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i
 	font-family: 'Dosis';
 }
 
-/*
-#nav p:hover {
-	background-color: blue;
-	color: #fff;
-}*/
-
 .nav-item:hover .nav-name {
 	color: rgba(83,210,249,0.5);
 }
@@ -341,7 +349,7 @@ a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i
 }
 
 #nav .current i {
-	color: #fff;
+	color: rgba(244,69,0,0.5);
 	border: solid 3px rgba(83,210,249,0.5);
 }
 
@@ -350,8 +358,8 @@ a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i
 
 /*HOME*/
 
-#home-copy {
-	padding-top: 100px;
+#section-1 {
+	padding-bottom: 150px;
 }
 
 #home-copy img {
@@ -361,7 +369,7 @@ a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i
 
 #home-image img {
 	float: right;
-	padding-top: 300px;
+	padding-top: 200px;
 }
 
 
@@ -369,13 +377,67 @@ a:hover , input[type="submit"]:hover, .nav-item:hover .nav-name, #nav .current i
 
 /*ABOUT*/
 
+#section-2 {
+	border-top: solid 5px #53D2F9;
+}
 
+#about-text {
+	float: left;
+}
 
+#about-text p {
+	margin-bottom: 40px;
+}
 
+#about-text i {
+	margin-right: 40px;
+	display: inline-block;
+	float: left;
+	color: #53D2F9;
+	height: 100px;
+	font-size: 30px;
+	width: 30px;
+}
 
+#about-text h4 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#about-list {
+	width: 400px;
+}
+
+#fact-box {
+	padding: 0 30px 10px;
+	float: right;
+}
+
+#fact-box i {
+	margin-right: 35px;
+	font-size: 70px;
+	display: block;
+	float: left;
+	color: #53D2F9;
+}
+
+#fact-box a {
+	color: #2069A5;
+	font-weight: 400;
+}
+
+#fact-box a:hover {
+	color: #53D2F9;
+}
 
 
 /*FEATURES*/
+
+#features-text {
+	border-top: solid 3px #2C3254;
+}
+
+
 
 
 

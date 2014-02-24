@@ -67,7 +67,28 @@
 
 function handleReady () {
 
-  
+
+
+  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 750);
+        return false;
+      }
+    }
+  });
+});
+
+
+jQuery('#nav').onePageNav({changeClassBefore: false});
+
+
+
 
   $('#nav').onePageNav({
       currentClass: 'current',
@@ -87,44 +108,18 @@ function handleReady () {
           //I get fired when you enter a section and I pass the list item of the section
       }
   });
+  
 
 
 
 
 
-  $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 750);
-        return false;
-      }
-    }
-  });
-});
+
 
 
 
 
   
-//   $(function() {
-//   $('a[href*=#]:not([href=#])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top
-//         }, 1000);
-//         return false;
-//       }
-//     }
-//   });
-// });
 
 //   function isScrolledIntoView(elem){
 
@@ -165,6 +160,9 @@ function handleReady () {
 
 
 }
+
+
+
 
 // (, { background: 'black', fontColor: 'white' })
 
