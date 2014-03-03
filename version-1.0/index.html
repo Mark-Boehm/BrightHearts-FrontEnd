@@ -10,7 +10,7 @@
 			<link rel="stylesheet" href="css/reset.css">
 			<link rel="stylesheet" href="css/normalize.css">
 			<link rel="stylesheet" href="css/style.css">
-			<link href='http://fonts.googleapis.com/css?family=Dosis:200,300,800|Ubuntu:300,400' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Dosis:700,800|Raleway:300,400,600' rel='stylesheet' type='text/css'>
 			<link rel="stylesheet" href="css/picto-foundry-arrows.css" />
 			<link rel="stylesheet" href="css/picto-foundry-general.css" />
 			<link rel="stylesheet" href="css/picto-foundry-medical-science.css" />
@@ -20,6 +20,7 @@
 			<script src="js/jquery.js"></script>
 			<script src="js/jquery.scrollTo.js"></script>
 			<script src="js/jquery.nav.js"></script>
+			<script src="js/realshadow.js"></script>
 			<script src="js/main.js"></script>
 	</head>
 
@@ -30,73 +31,157 @@
 
 		<ul id="nav">
 			<li class="current">
-				<a class="nav-item" href="#section-1"><i class="icon-medical-symbol-fill"></i><p class="nav-name">Home</p></a>
+				<a class="nav-item shadow" href="#section-1"><i class="shadow">1</i><p class="nav-name">Home</p></a>
 			</li>
 			<li>
-				<a class="nav-item" href="#section-2"><i class="icon-medical-symbol-fill"></i><p class="nav-name">About</p></a>
+				<a class="nav-item shadow" href="#section-2"><i class="shadow">2</i><p class="nav-name">About</p></a>
 			</li>
 			<li>
-				<a class="nav-item" href="#section-3"><i class="icon-medical-symbol-fill"></i><p class="nav-name">Features</p></a>
+				<a class="nav-item shadow" href="#section-3"><i class="shadow">3</i><p class="nav-name">Features</p></a>
 			</li>
 		</ul>
 
 
 
-		<div class="texture">
+		<div id="section-1" class="texture">
 
+			<p class="section-number shadow">1</p>
 
-			<div id="section-1" class="section full-width clearfix">
+			<div class="section full-width clearfix">
 				<div id="home-copy" class="two-third-width">
-					<img src="images/app-icon.png">
-					<h1>Bright Hearts</h1>
-					<h3>Discover the power of your heart to improve focus, manage stress, and enhance performance.</h3>
-					<a href="#section-2" class="button red">Find out more</a>
-					<a href="#section-6" class="button blue">Get started</a>
+					<img src="images/app-icon.png" class="shadow">
+					<h1 class="shadow">Bright Hearts</h1>
+					<h3 class="shadow">Discover the power of your heart to improve focus, manage stress, and enhance performance.</h3>
+					<a href="#section-2" class="button red shadow">Find out more</a>
+					<a href="#section-6" class="button blue shadow">Get started</a>
 				</div>
 				<div id="home-image" class="third-width">
 					<img src="images/white-iPhone-app.png">
 				</div>
 
 			</div>
-			<div id="section-2" class="white texture dark-blue-text">
-				<div class="section full-width clearfix">
-					<h2>A creative health app for iPad and iPhone.</h2>
+			<div>
+			<div id="section-2">
+				<div class="texture">
+					<a href="#section-2" class="section-number shadow-2">2</a>
+					<div class="section full-width clearfix">
+						<h2 class="shadow-2">A creative health app <br/>for iPad and iPhone.</h2>
 
 
-					<div id="about-text" class="half-width">
-						
-						<p>Bright Hearts combines biofeedback data with beautiful, interactive visuals and sounds to help you…</p>
-						<div id="about-list">
-							<p><i class="icon-heart-beat"></i><h4>relax</h4>Monitor and pace your breathing.  A small sensor measures your heart rate.</p>
-							<p><i class="icon-tablet"></i><h4>relate</h4>The app interprets biofeedback. Changes in your heart rate variability produce beautiful visuals on screen in real time.</p>
-							<p><i class="icon-graph-up-1"></i><h4>reflect</h4>Upload data and track progress with the Bright Charts web application.</p>
+						<div id="about-text" class="two-third-width white rounded dark-blue-text shadow-2">
+							
+							<p>Bright Hearts combines biofeedback data with beautiful, interactive visuals and sounds to help you…</p>
+							<div id="about-list">
+								<p><i class="icon-heart-beat shadow-3"></i><h3 class="light-blue-text shadow-3">relax</h3>Monitor and pace your breathing.  A small sensor measures your heart rate.</p>
+								<p><i class="icon-tablet shadow-3"></i><h3 class="light-blue-text shadow-3">relate</h3>The app interprets biofeedback. Changes in your heart rate variability (HRV) produce beautiful visuals on screen in real time.</p>
+								<p><i class="icon-graph-up-1 shadow-3"></i><h3 class="light-blue-text shadow-3">reflect</h3>Upload data and track progress with the Bright Charts web application.</p>
+							</div>
+							<a href="#section-3" class="button red shadow-3">Features</a>
 						</div>
-						<a href="#section-3" class="button red">Features</a>
+
+						<div id="fact-box" class="third-width white-text">
+
+							<h4><i class="icon-medical-symbol-fill shadow"></i></h4>
+							<p><a href="http://en.wikipedia.org/wiki/Heart_rate_variability" class="blue-text" target="_blank">Heart rate variability (HRV)</a> describes beat-by-beat changes in heart rate. It's a reliable and non-invasive measure of physical stress, relaxation and recovery.</p>
+
+							<p>Biofeedback training to increase HRV has been shown to be an effective a treatment for a variety of stress and anxiety related conditions.</p>
+
+							<p>The BrightHearts app help you to observe and gently regulate your breathing to increase your HRV, producing a highly ordered, wave-shaped patterning of the heart rhythm known as ‘respiratory sinus arrhythmia’.</p>
+						</div>
+
 					</div>
-
-					<div id="fact-box" class="third-width white dark-blue-border">
-
-						<h4><i class="icon-medical-symbol"></i>HRV and <br/>your health</h4>
-						<p><a href="http://en.wikipedia.org/wiki/Heart_rate_variability" class="blue-text" target="_blank">Heart rate variability (HRV)</a> describes beat-by-beat changes in heart rate. It's reliable and non-invasive measure of physical stress, relaxation and recovery.</p>
-
-						<p>Biofeedback training to increase HRV has been shown to be an effective a treatment for a variety of stress and anxiety related conditions.</p>
-
-						<p>The BrightHearts app help you to observe and gently regulate your breathing to increase your HRV, producing a highly ordered, wave-shaped patterning of the heart rhythm known as ‘respiratory sinus arrhythmia’.</p>
-					</div>
-
 				</div>
 			</div>
-			<div id="section-3" class="white texture dark-blue-text">
-			    <div id="features-text" class="section full-width clearfix">
-			    	<h2>Features</h2>
+			<div id="section-3" >
+				<a href="#section-3" class="section-number">3</a>
+				<div class="texture">
+				    <div id="features-text" class="section full-width clearfix shadow-2">
+				    	<h2>Interactive tools that will<br/> change the way you breathe.</h2> 
 
-				    
+
+
+							<div id="slider" class="full-width white dark-blue-text shadow-2">
+
+								<div class="slider-wrap">
+									<div id="left" class="arrow pointer shadow-3"><i class="icon-chevron-left-thick"></i></div>
+									<div id="right" class="arrow pointer a-right shadow-3"> <i class="icon-chevron-right-thick"></i></div>
+									<ul class="group"></ul>
+									<div class="slider group">
+										<div class="slide">
+											<div class="pad-left third-width">
+
+
+												<img src="images/sony-device.png">
+												
+											</div>
+											<div class="half-width">
+
+
+												
+												<div id="slider-text">
+													<h3 class="light-blue-text shadow-3"><i class="icon-heart-beat"></i>Pulse Sensor</h3>
+													<strong>features:</strong>
+													<p>Lorem ipsum dolor sit amet, ad eos iracundia liberavisse, nec et laoreet oporteat tacimates. Feugiat epicurei gubergren cu mel,  melius intellegat ius cu. </p>
+													<p>at duo falli alterum. Vim ex velit aeque scripserit,</p>
+													<p>Bonorum principes argumentum nec at, at justo fugit dignissim vis. Omnis nusquam ius ad, mea no sale epicurei intellegam.</p>
+												</div>
+												
+												
+											</div>
+										</div>
+										<div class="slide">
+											<div class="third-width">
+												<img src="images/iPhone-5-standing.png">
+												
+											</div>
+											<div class="half-width">
+
+
+												
+												<div id="slider-text">
+													<h3 class="light-blue-text shadow-3"><i class="icon-tablet"></i> Bright Hearts App</h3>
+													<strong>features:</strong>
+													<p>Lorem ipsum dolor sit amet, ad eos iracundia liberavisse, nec et laoreet oporteat tacimates. Feugiat epicurei gubergren cu mel,  melius intellegat ius cu. </p>
+													<p>at duo falli alterum. Vim ex velit aeque scripserit,</p>
+													<p>Bonorum principes argumentum nec at, at justo fugit dignissim vis. Omnis nusquam ius ad, mea no sale epicurei intellegam.</p>
+												</div>
+												
+											</div>
+										</div>
+										<div class="slide">
+											<div class="third-width pad-left">
+												<img src="images/iMac-data-dashboard.png">
+												
+											</div>
+											<div class="half-width">
+
+
+												
+												<div id="slider-text">
+													<h3 class="light-blue-text shadow-3"><i class="icon-graph-up-1"></i>Bright Charts Web Application</h3>
+													<strong>features:</strong>
+													<p>Lorem ipsum dolor sit amet, ad eos iracundia liberavisse, nec et laoreet oporteat tacimates. </p>
+													<p>at duo falli alterum. Vim ex velit aeque scripserit,</p>
+													<p>Bonorum principes argumentum nec at.</p>
+													<a href="#section-4" class="button red shadow-3">a closer look</a>
+												</div>
+
+
+
+
+											</div>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						
+
+				    	
+
 				    </div>
-
-
-			    	
-
-			    </div>
+				</div>
 			</div>
 
 		</div>
